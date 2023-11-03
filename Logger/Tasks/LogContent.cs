@@ -1,10 +1,7 @@
-﻿using AppConfigure;
-using Logger.Model;
+﻿using Logger.Model;
 using MyApplication;
-using System;
 using System.Diagnostics;
 using System.Reflection;
-using static AppConfigure.BaseModel;
 
 namespace Logger.Tasks
 {

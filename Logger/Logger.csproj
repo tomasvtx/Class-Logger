@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Logger</RootNamespace>
     <AssemblyName>Logger</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile>
@@ -35,12 +35,10 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AppConfigure, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="AppConfigure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+    <Reference Include="MyApplication, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\.NET 3.5\AppConfigure\1.0\AppConfigure\bin\Release\AppConfigure.dll</HintPath>
-    </Reference>
-    <Reference Include="MyApplication">
-      <HintPath>..\..\..\MyApplication\MyApplication\bin\Release\MyApplication.dll</HintPath>
+      <HintPath>..\..\..\Class-MyApplication\MyApplication\bin\Release\MyApplication.dll</HintPath>
     </Reference>
     <Reference Include="NET Helper">
       <HintPath>..\..\..\..\.NET 4.5\netUtilities\1.0\NET Helper\bin\Release\NET Helper.dll</HintPath>

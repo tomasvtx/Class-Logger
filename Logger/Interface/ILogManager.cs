@@ -3,7 +3,7 @@ using System.ComponentModel;
 
 namespace Logger
 {
-    public interface ILogManager : INotifyPropertyChanged
+    public interface ILogManager
     {
         /// <summary>
         /// Zpráva o stavu programu nebo kód procesu, který může být užitečný pro sledování aktuálního stavu aplikace.

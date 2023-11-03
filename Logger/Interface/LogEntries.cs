@@ -7,7 +7,7 @@ namespace Logger
     /// <summary>
     /// Reprezentuje záznam logu.
     /// </summary>
-    public interface LogEntries : INotifyPropertyChanged
+    public interface LogEntries
     {
         /// <summary>
         /// Získá nebo nastaví datum záznamu.
