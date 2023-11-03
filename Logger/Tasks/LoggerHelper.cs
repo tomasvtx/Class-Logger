@@ -53,7 +53,7 @@ namespace Logger.Tasks
         protected static string GetMainWindowTitle(IMyApp myApp, int code)
         {
             // Sestavení titulku hlavního okna obsahující název aplikace, verzi, stavový kód a verzi .NET Frameworku
-            return $"{myApp?.AppConfig?.DaikinAppConfig?.AppName} {myApp?.Resources?.AppType?.Assembly?.GetName()?.Version} [{code.ToString(statusCodeFormat)}] {myApp?.Resources?.DotNetVersion}";
+            return $"{myApp?.AppConfig?.AppConfiguration?.AppName} {myApp?.Resources?.AppType?.Assembly?.GetName()?.Version} [{code.ToString(statusCodeFormat)}] {myApp?.Resources?.DotNetVersion}";
         }
 
 
@@ -150,10 +150,10 @@ namespace Logger.Tasks
             try
             {
                 // Získání výchozího umístění pro uložení záznamu
-                string umisteniZaznamu = myApp?.AppConfig?.DaikinAppConfig?.Logger?.RecordLocation ?? @"C:\PE_OUTPUT";
+                string umisteniZaznamu = myApp?.AppConfig?.AppConfiguration?.Logger?.RecordLocation ?? @"C:\PE_OUTPUT";
 
                 // Vytvoření názvu souboru pro záznam s aktuálním datem
-                string nazevSouboruZaznamu = $"{DateTime.Now:yyyyMMdd}-" + (myApp?.AppConfig?.DaikinAppConfig?.Logger?.RecordFileName ?? "LOG") + ".txt";
+                string nazevSouboruZaznamu = $"{DateTime.Now:yyyyMMdd}-" + (myApp?.AppConfig?.AppConfiguration?.Logger?.RecordFileName ?? "LOG") + ".txt";
 
                 // Sestavení obsahu záznamu
                 string obsahZaznamu = $"\n\n\n{DateTime.Now}\n{zprava}\nVe: {metoda?.DeclaringType?.FullName}.{metoda?.Name}";
@@ -162,7 +162,7 @@ namespace Logger.Tasks
                 string slozka = Path.Combine(umisteniZaznamu, $"{myApp?.Resources?.AppType?.Assembly?.GetName()?.Name}");
 
                 // Názvy složek pro různé typy záznamů
-                string[] slozky = { myApp?.AppConfig?.DaikinAppConfig?.Logger?.AppLogErorPath ?? "_ErrLog", myApp?.AppConfig?.DaikinAppConfig?.Logger?.AppLogErrorInternal ?? "_InternalErrorLog", myApp?.AppConfig?.DaikinAppConfig?.Logger?.AppLogPathName ?? "_Applog" };
+                string[] slozky = { myApp?.AppConfig?.AppConfiguration?.Logger?.AppLogErorPath ?? "_ErrLog", myApp?.AppConfig?.AppConfiguration?.Logger?.AppLogErrorInternal ?? "_InternalErrorLog", myApp?.AppConfig?.AppConfiguration?.Logger?.AppLogPathName ?? "_Applog" };
                 string chybovaSlozka = null;
 
                 // Získání výstupu pro stav procesu
